@@ -1,0 +1,231 @@
+{
+  "[dotenv]": {
+    "editor.formatOnSave": false
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  // "[yaml]": {
+  //   "editor.defaultFormatter": "docsmsft.docs-yaml"
+  // },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  "bookmarks.showCommandsInContextMenu": true,
+  "bookmarks.useWorkaroundForFormatters": true,
+  // Php: default property visibility
+  "class-helper.php.property.visibility": "public",
+  // TypeScript: prefix method and properties with public or private keywords
+  "class-helper.ts.prefixVisibility": true,
+  // TypeScript: default property visibility
+  "class-helper.ts.property.visibility": "public",
+  // TypeScript: prefix method with the type declaration
+  "class-helper.ts.method.prefixType": true,
+  // "composer.executablePath": "/usr/local/bin/composer",
+  // "cucumberautocomplete.steps": [
+  //     "test/features/step_definitions/*.js",
+  //     "node_modules/qa-lib/src/step_definitions/*.js"
+  // ],
+  // "cucumberautocomplete.syncfeatures": "test/features/*feature",
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "docker.host": "tcp://192.168.99.104:2376",
+  "docker.certPath": "~/.docker/machine/machines/default",
+  "docker.tlsVerify": "1",
+  "docker.machineName": "default",
+  // "[html]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "editor.formatOnSave": true,
+  "editor.letterSpacing": 0.3,
+  "editor.lineHeight": 22,
+  "editor.fontFamily": "Victor Mono, Menlo, monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "editor.fontWeight": "400",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Comment",
+        "scope": [
+          "comment",
+          "comment.block",
+          "comment.block.documentation",
+          "comment.line",
+          "comment.line.double-slash",
+          "punctuation.definition.comment"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+          // "fontStyle": "italic underline",
+          // "fontStyle": "italic bold underline",
+        }
+      }
+    ],
+    "[Monokai]": {
+      "comments": "#229977"
+    }
+  },
+  "emmet.excludeLanguages": [
+    "php"
+  ],
+  "emmet.includeLanguages": {
+    // "html": "twig"
+    // "html": "twig"
+  },
+  "executeAutofix": true,
+  "intelephense.environment.documentRoot": "./public/index.php",
+  "intelephense.files.exclude": [
+    "**/.git/**",
+    "**/.svn/**",
+    "**/.hg/**",
+    "**/CVS/**",
+    "**/.DS_Store/**",
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**/{Tests,tests}/**"
+  ],
+  "intelephense.format.enable": false,
+  // Upper size limit, in KB, that will count a package as a small package
+  "importCost.smallPackageSize": 50,
+  // Upper size limit, in KB, that will count a package as a medium package
+  "importCost.mediumPackageSize": 100,
+  // Decoration color for small packages
+  "importCost.smallPackageColor": "#7cc36e",
+  // Decoration color for medium packages
+  "importCost.mediumPackageColor": "#7cceaa",
+  // Decoration color for large packages
+  "importCost.largePackageColor": "#d44e20",
+  // File extensions to be parsed by the Typescript parser
+  "importCost.typescriptExtensions": [
+    "\\.tsx?$"
+  ],
+  // File extensions to be parsed by the Javascript parser
+  "importCost.javascriptExtensions": [
+    "\\.jsx?$"
+  ],
+  "importCost.bundleSizeDecoration": "both", // Which bundle size to display
+  "importCost.showCalculatingDecoration": true, // Display the 'calculating' decoration
+  "importCost.debug": false, // Print debug messages in output channel
+  "files.associations": {
+    // "*.html\\.?*": "twig", //! Twig extention
+    // "*.html": "twig",
+    // "*.html.twig": "twig"
+  },
+  "files.exclude": {
+    "**/.git": true, // this is a default value
+    "**/.DS_Store": true
+    // this is a default value
+    // alternative version
+    // "**/vendor": true,
+    // "**/node_modules": true
+    // this excludes all folders
+    // named "node_modules" from
+    // the explore tree
+    // alternative version
+    // "node_modules": true    // this excludes the folder
+    // only from the root of
+    // your workspace
+  },
+  "namespaceResolver.sortAlphabetically": true,
+  "namespaceResolver.sortOnSave": true,
+  "namespaceResolver.autoSort": true,
+  "phpConstructor.visibility": "protected", // Default property visibility modifier
+  "phpConstructor.constructorVisibility": "protected", // Default constructor visibility modifier
+  "phpConstructor.choosePropertyVisibility": true, // Choose property visibility modifier in snippet
+  "phpConstructor.chooseConstructorVisibility": true, // Choose constructor visibility modifier in snippet
+  "php-cs-fixer.allowRisky": false,
+  // "php-cs-fixer.autoFixByBracket": true,
+  "php-cs-fixer.autoFixBySemicolon": true,
+  // "php-cs-fixer.formatHtml": true,
+  "php-cs-fixer.documentFormattingProvider": true,
+  "php-cs-fixer.config": ".php_cs.php;.php_cs.dist.php",
+  "php-cs-fixer.exclude": [
+    "**/.git/**",
+    "**/.svn/**",
+    "**/.hg/**",
+    "**/CVS/**",
+    "**/.DS_Store/**",
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**/{Tests,tests}/**"
+  ],
+  "php-cs-fixer.executablePath": "php-cs-fixer",
+  "php-cs-fixer.onsave": true,
+  "php-cs-fixer.pathMode": "override",
+  "php-cs-fixer.rules": "@PSR2",
+  "prettier.enabledLanguageIds": [
+    "html",
+    "twig"
+  ],
+  "projectManager.git.baseFolders": [
+    "$HOME\\Projects"
+  ],
+  "projectManager.git.ignoredFolders": [
+    "node_modules",
+    "out",
+    "typings",
+    "test"
+  ],
+  "projectManager.groupList": true,
+  "projectManager.showProjectNameInStatusBar": true,
+  "prettier.disableLanguages": [
+    "php"
+  ],
+  // "twig-language-2.formatting": true,
+  // "twig-language-2.braceLine": true,
+  // "twig-language-2.braces": true,
+  // "twigcs.enable": true,
+  // "twigcs.enabledWarning": true,
+  "twigcs.executablePath": "~/.composer/vendor/bin/twigcs",
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    // "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli"
+  ],
+  "synthwave84.brightness": 0.55,
+  "synthwave84.disableGlow": true,
+  "workbench.welcome.enabled": false,
+  "yaml.format.enable": true
+}
