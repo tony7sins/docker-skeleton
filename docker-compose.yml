@@ -1,5 +1,43 @@
 version: "3.8"
 
 volumes:
+  composer: {}
   db-data:
-# services:
+
+networks:
+  main:
+
+services:
+  composer:
+    build:
+      context: .
+      dockerfile: .docker/php/composer/Dockerfile
+    image: composer
+    volumes:
+      - composer:/.composer/cache:rw,cached
+
+  app-fpm:
+    container_name: ${PROJECT_NAME}_fpm
+    image: php:latest
+    build:
+      context: .
+      dockerfile: .docker/php/fpm/Dockerfile
+    # command:
+    #   ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+    # depends_on:
+    #   - db
+    #   - rabbitmq
+    # environment:
+    #   - APP_DEBUG=1
+    #   - DATABASE_URL=mysql://${DB_USER}:${DB_PASSWORD}@db:${DB_PORT}/${DB_NAME}?serverVersion=5.7
+    #   - MESSENGER_TRANSPORT_DSN=amqp://guest:guest@rabbitmq:5672/%2f/messages
+    # ports:
+    #   - 9000:9000
+    networks:
+      - main
+    volumes:
+      - composer:/.composer/cache:rw,cached
+    # - ./app:/usr/src/app:rw
+    # - ./log/web:/var/log/nginx
+    # - ./var/app/supervisor:/var/log/supervisor:rw
+    # - ./var/app:/usr/src/app/var:rw

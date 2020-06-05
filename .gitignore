@@ -2,4 +2,9 @@
 !.gitignore
 **/*/.vscode/*
 .env
+
+**/*/vendor/*
+**/*/node_modules/*
+
+app/*
 ### < Custom /> ###
