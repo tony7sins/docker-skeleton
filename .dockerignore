@@ -1,0 +1,10 @@
+### < Custom > ###
+.git
+**/*/.vscode/*
+.editorconfig
+
+**/public/js/
+**/public/css/
+yarn-error.log
+
+### < Custom /> ###
