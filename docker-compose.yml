@@ -9,23 +9,26 @@ networks:
 
 services:
   composer:
+    container_name: ${PROJECT_NAME}_composer
     build:
       context: .
       dockerfile: .docker/php/composer/Dockerfile
+      args:
+        tag: latest
     image: composer
     volumes:
       - composer:/.composer/cache:rw,cached
 
   app-fpm:
-    container_name: ${PROJECT_NAME}_fpm
-    image: php:latest
     build:
       context: .
       dockerfile: .docker/php/fpm/Dockerfile
+    container_name: ${PROJECT_NAME}_fpm
+    image: php:latest
+
     # command:
     #   ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
     # depends_on:
-    #   - db
     #   - rabbitmq
     # environment:
     #   - APP_DEBUG=1
