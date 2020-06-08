@@ -8,3 +8,8 @@
 
 app/*
 ### < Custom /> ###
+
+### < Temprary > ###
+.xxx/*
+.docker/php/composer-installer.sh
+### < Temprary /> ###
