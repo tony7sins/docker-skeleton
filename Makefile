@@ -1,6 +1,7 @@
 init: clear init-emptry
+	@./bin/app.sh
 
-init-emptry: .env.example
+init-empty: .env.example
 	@cp .env.example .env
 
 clear: .env
