@@ -1,7 +1,7 @@
 ARG PHP_VERSION=7.4.2
 
 # continue with the official PHP image
-FROM php:${PHP_VERSION} AS php
+FROM php:${PHP_VERSION}-fpm AS php
 
 ARG PROJECT_PATH=app
 ARG LOCAL_PROJECT_PATH="/usr/src/app"
