@@ -1,12 +1,20 @@
 ### < Custom > ###
 !.gitignore
+# IDE configs
 **/*/.vscode/*
-.env
-
+# ventor files
 **/*/vendor/*
 **/*/node_modules/*
-
+# development files
+.env
+/var/
 app/*
+# certificats
+.docker/server/certs
+**/*/*.key
+**/*/*.pem
+**/*/*.crt
+
 ### < Custom /> ###
 
 ### < Temprary > ###
