@@ -1,8 +1,11 @@
-init: clear init-emptry
-	@./bin/app.sh
+SCRIPTS:=./bin
+DEV_ENV=.env
 
-init-empty: .env.example
+init-empty: init
+	@${SCRIPTS}/app.sh
+
+init: .env.example clear 
 	@cp .env.example .env
 
-clear: .env
-	@rm -Rf .env
+clear:
+	@[[ -f ${DEV_ENV} ]] && rm ${DEV_ENV} || echo 'Nothing to delete!'
