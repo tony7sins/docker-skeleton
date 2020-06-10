@@ -15,11 +15,11 @@ function createApp() {
 
     case $1 in
     symfony)
-        echo "Project will be installed via $1?"
+        echo "Project will be installed via $1"
         symfony new app --full
         ;;
     composer)
-        echo "Project will be installed via $1?"
+        echo "Project will be installed via $1"
         composer create-project symfony/website-skeleton app
         ;;
     esac
@@ -30,12 +30,14 @@ function createApp() {
     sleep 0.5 && echo -n '.'
     sleep 0.5 && echo '.'
     sed -e '/^DATABASE_URL/s/^/# /' "${APP_DIR:-app}/".env | tee "${APP_DIR:-app}/".env.local
+    # mv "${APP_DIR:-app}/".env.temp "${APP_DIR:-app}/".env
+    chmod +r "${APP_DIR:-app}"/.env.local
 
-    echo -n "Deleting ${APP_DIR:-app}/.env"
-    sleep 0.5 && echo -n '.'
-    sleep 0.5 && echo -n '.'
-    sleep 0.5 && echo '.'
-    mv "${APP_DIR:-app}/".env "${APP_DIR:-app}/".env.example
+    # echo -n "Deleting ${APP_DIR:-app}/.env"
+    # sleep 0.5 && echo -n '.'
+    # sleep 0.5 && echo -n '.'
+    # sleep 0.5 && echo '.'
+    # mv "${APP_DIR:-app}/".env "${APP_DIR:-app}/".env.example
 }
 
 if [[ $(which symfony) && -f $(which composer) ]]; then
