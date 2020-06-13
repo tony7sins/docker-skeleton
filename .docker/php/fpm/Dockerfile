@@ -46,5 +46,5 @@ COPY app/composer.json app/composer.lock ${LOCAL_PROJECT_PATH}/
 
 WORKDIR ${LOCAL_PROJECT_PATH}/
 # WORKDIR /usr/src/app/
-RUN composer install
+RUN composer install && chmod +rx public/index.php
 # PATH=$PATH:/usr/src/app/bin:/usr/src/app/vendor/bin:bin

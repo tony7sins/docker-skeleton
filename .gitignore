@@ -9,7 +9,7 @@
 # development files
 .env
 /var/
-app/*
+/app/*
 # certificats
 .docker/server/certs
 **/*/*.key
@@ -22,3 +22,4 @@ app/*
 .xxx/*
 .docker/php/composer-installer.sh
 ### </ Temprary /> ###
+app
